@@ -1,0 +1,60 @@
+Source: freexl
+Maintainer: Debian GIS Project <pkg-grass-devel@lists.alioth.debian.org>
+Uploaders: David Paleino <dapal@debian.org>,
+           Bas Couwenberg <sebastic@xs4all.nl>
+Section: libs
+Priority: optional
+Build-Depends: debhelper (>= 9~),
+               autotools-dev,
+               dh-autoreconf
+Standards-Version: 3.9.5
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=pkg-grass/freexl.git
+Vcs-Git: git://anonscm.debian.org/pkg-grass/freexl.git
+Homepage: https://www.gaia-gis.it/fossil/freexl/
+
+Package: libfreexl-dev
+Architecture: any
+Multi-Arch: same
+Section: libdevel
+Depends: libfreexl1 (= ${binary:Version}),
+         ${misc:Depends}
+Description: library for direct reading of Microsoft Excel spreadsheets - devel
+ FreeXL is a C library implementing direct reading of Microsoft Excel
+ spreadsheets, up to the BIFF8 file format specification (i.e. .xls, Microsoft
+ Excel XP/2003 and older).
+ The XML SS file format specification (.xlsx, Microsoft Excel 2007 and newer) is
+ not supported.
+ .
+ This package contains the development headers.
+
+Package: libfreexl1
+Architecture: any
+Multi-Arch: same
+Depends: ${shlibs:Depends},
+         ${misc:Depends}
+Pre-Depends: ${misc:Pre-Depends}
+Description: library for direct reading of Microsoft Excel spreadsheets
+ FreeXL is a C library implementing direct reading of Microsoft Excel
+ spreadsheets, up to the BIFF8 file format specification (i.e. .xls, Microsoft
+ Excel XP/2003 and older).
+ The XML SS file format specification (.xlsx, Microsoft Excel 2007 and newer) is
+ not supported.
+ .
+ This package contains the shared library.
+
+Package: libfreexl1-dbg
+Architecture: any
+Multi-Arch: same
+Section: debug
+Priority: extra
+Depends: libfreexl1 (= ${binary:Version}),
+         ${misc:Depends}
+Description: library for direct reading of Microsoft Excel spreadsheets - debug
+ FreeXL is a C library implementing direct reading of Microsoft Excel
+ spreadsheets, up to the BIFF8 file format specification (i.e. .xls, Microsoft
+ Excel XP/2003 and older).
+ The XML SS file format specification (.xlsx, Microsoft Excel 2007 and newer) is
+ not supported.
+ .
+ This package contains the debugging symbols.
+

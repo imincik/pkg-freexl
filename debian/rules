@@ -1,0 +1,14 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+export DEB_LDFLAGS_MAINT_APPEND = -lm
+
+%:
+	dh $@ --with autoreconf
+
+override_dh_strip:
+	dh_strip --dbg-package=libfreexl1-dbg
