@@ -1,3 +1,9 @@
+freexl (1.0.0g-1~precise1) precise; urgency=low
+
+  * Rebuild for Precise. 
+
+ -- Ivan Mincik <ivan.mincik@gmail.com>  Wed, 26 Mar 2014 12:58:46 +0100
+
 freexl (1.0.0g-1) unstable; urgency=low
 
   * New upstream release. 
